@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body{
+    background-color: lightgoldenrodyellow;
+    }
+
+    h1{
+        color: #c6dde7;
+        background-color: #2E86AB;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 26px;
+    }
+
+    h2{
+        color: #F24236;
+    }
+
+    p{
+        text-align: justify;
+    }
+

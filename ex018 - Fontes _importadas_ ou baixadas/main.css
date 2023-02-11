@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* Para importar fontes do GOOGLE FONTS:
+- escolher a fonte;
+- selecionar a família e estilos;
+- abrir painelzinho lateral do _googlefonts_;
+- selecionar "@import";
+- copiar o código para html;
+- usar o @import no topo do arquivo .css, assim: */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); 
+/*usar este parâmetro abaixo que é copiado do _googlefonts_:*/
+/**font-family: 'Kaushan Script', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');/*font-family: 'Prompt', sans-serif;*/
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px;
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;    
+}
+
+h2{
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+p{
+    text-align: justify;
+    text-indent: 12px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+}

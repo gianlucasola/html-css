@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+div{
+    display: inline-block;
+    background-color: #e7692e;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+/* Pseudo-classes são representadas por dois pontos (:) */
+/* Significam algo como "quando eu fizer tal coisa */
+
+div:hover{ /*na div, QUANDO eu _hover_ (passar o mouse)*/
+background-color: #f58e5e;
+box-shadow: 2px 2px 7px #b63110f6;
+}

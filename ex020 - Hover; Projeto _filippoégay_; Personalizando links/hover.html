@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de hover</title>
+    
+    <style>
+
+body{
+    background-image: linear-gradient(#74ec74ef 40%, #31d331ef);
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body:hover{
+    background-image: radial-gradient(#74ec74ef 40%, #31d331ef); ;
+}
+
+main{
+    background-color: #e57a06;
+    text-align: center;
+    border-radius: 5px;
+    width: 420px;
+    height: 115px;
+    margin: auto;
+    margin-top: 18em;
+    }
+
+main:hover{
+    box-shadow: 2px 2px 4px #a86f36;
+}
+
+h1{
+    padding-top: 12px;
+}
+
+p#temcoisa{
+    font-size: 20px;
+    margin-top: -11px;
+}
+
+div#passeomouse{
+    background-color: #41419e;
+    color: white;
+    width: 160px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 200;
+    margin: auto;
+    margin-top: -8px;
+}
+
+div#passeomouse:hover{
+text-align: center;
+width: 250px;
+border-radius: 9px;
+margin: auto;
+}
+
+main:hover{
+    animation: spin 5.3s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg)
+    }
+    to{
+        transform: rotateY(360deg)
+    }
+}
+
+div > p{ /*se refere ao _p_ que está DENTRO (>) da _div_*/
+    display: none; /*declaração para tornar o parágrafo de dentro da div invisível, até que passe o mouse em cima*/
+}
+
+div:hover{
+    color: rgb(253, 251, 251);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+div:hover > p#teAmo{ /*quando passar o mouse nessa _div_, o _p_ se tornará assim:*/
+    display: block; /*declaração para, quando passar o mouse por cima, aparecer o texto com todas essas características abaixo:*/
+    color: #58560b;
+    background-color: #f8f272;
+    font-weight: 700;
+    font-size: 33px;
+    padding: 4px;
+    width: 145px;
+    text-align: center;
+    border-radius: 11px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+    </style>
+</head>
+
+
+<body>
+    <main>
+            <h1>Esse cartão é animado</h1>
+            <p id="temcoisa">E tem alguma coisa importante aqui:</p>
+        <div id="passeomouse">Passe o mouse aqui
+            <p id="teAmo">Filippo<br>é gay!!</p>
+        </div>
+    </main>
+</body>
+</html>

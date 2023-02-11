@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+    <!-- Criar três versões de tamanhos para usar a imagem e se adaptar aos dispositivos:
+    - Versão P: 300px;
+    - Versão M: 700px;
+    - Versão G: 1000px. -->
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <!-- Usando tag PICTURE, com tag SOURCE:MEDIA:TYPE e tag IMG:
+    1. na "base", tag img para inserir a versão grande da imagem; 
+    2. acima dela, a tag _source:media:type_ com o media ="max-widht" 50px maior que a versão grande; e no _srcset_ o arquivo tamanho M;
+    3. acima dela, a tag _source:media:type_ com o media ="max-widht" 50px maior que a versão média; e no _srcset_ o arquivo tamanho P. -->
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5.</p>
+    <!-- Áudio com maior compatibilidade usando tag AUDIO, SOURCE:SRC e no parâmetro _type_ "audio/[tipo do arquivo: mpeg(mp3) ou ogg ou wav]" -->
+
+    <!-- Usar tag PRELOAD com parâmetro _metadata_ para pré-carregar alguns dados básicos do áudio e não pesar tanto. --> <!--Também é possível usar o parâmetro _loop_-->
+    <audio preload="auto" controls loop>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midias/guanacast-33.ogg" type="audio/ogg">
+        <source src="midias/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não foi capaz de reproduzir este áudio. <a href="midias/guanacast-33.mp3">Clique aqui</a>para baixar o arquivo.</p>
+    </audio>
+
+    
+</body>
+</html>
