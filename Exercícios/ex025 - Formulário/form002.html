@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Teste de Formulário</h1>    
+    <form action="cadastro.php" method="post"> <!--  method POST não mostra na url o que foi digitado nos input's;
+    method GET mostra-->
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required size="10"> <!-- _required_ significa que o preenchimento do input é OBRIGATÓRIO-->    <!--  _size_ significa quantos caracteres "caberão visíveis" no input-->  
+        </p>   
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="text" name="sen" id="isen" required minlength="6" maxlength="12"> <!--  preenchimento obrigatório (_required_) e comprimento mín e máx determinados pelos números 6 e 12, nesse caso -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>    
+    </form>
+</body>
+
+</html>
