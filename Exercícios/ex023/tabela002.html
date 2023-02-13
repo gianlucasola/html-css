@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    
+    <style>
+        html, body{
+            width: 100vw;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        caption{
+            font-size: 1.3em;
+            font-weight: 600;
+            padding: 10px;
+        }
+
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 500px;
+            position: relative; /*  obrigatório no caso de querer deixar o cabeçalho da tabela fixo na rolagem  */
+        }
+
+        thead, tfoot{
+            border: 1px solid blue;
+            background-color: #3a6fe2;
+            color: white;
+        }
+
+        thead > tr > th{ /*  se refere a célula de cabeçalho da linha cabeçalho  */
+            position: sticky; /*  "colar" no elemento pai: a _table_  */
+            top: -1px; /*  para colar no topo  */
+            background-color: #3a6fe2; /*  para "levar" o background junto  */
+        }
+
+        tbody > tr:nth-child(2n){ 
+            /*  
+            - nth-child(2n) = a cada 2 tr's (nesse caso)
+            - nth-child(odd) = todas as tr's ÍMPARES
+            - nth-child(even) = todas as tr's PARES  
+            */
+            background-color: #bbcaeb;
+        }
+
+        tr{
+            height: 30px;
+            text-align: center;
+        }
+
+        td, th{
+            border: 1px solid blue;
+        }
+
+        td.num{
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        Anatomia de tabelas grandes:
+        TABLE:
+            - caption
+            - tHead:
+                TR, TD, TH;
+            - tBody:
+                TR, TD, TH;
+            - tFoot:
+                TR, TD, TH.
+    -->
+
+    <table>
+        <caption>População das unidades federativas</caption> <!--  "legenda" da tabela  -->
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--  TH é como td (dados da tablea/contéudo de cada célula), mas th é tag semântica de *dados DO CABEÇALHO*  -->
+                <th scope="col" style="width: 130px;">População</th> <!--  'scope' é algo como "os dados referentes a esse título estão em *columns ou rows* (de pé ou em linha)"  -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">41.262.199</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">19.597.330</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">15.989.929</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.016.906</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">10.444.526</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10.693.929</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">8.796.448</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.452.381</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">7.581.051</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">6.248.436</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6.003.788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.574.789</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.514.952</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3.766.528</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.483.985</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.035.122</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.168.027</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.118.360</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.120.494</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2.923.369</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.449.024</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.068.017</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.562.409</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.383.445</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">733.559</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">669.526</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">450.479</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> <!--  dado referente a esse título está ao lado dele, em linha (row)  -->
+                <td class="num"><strong>xxxxxxxxxx</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
