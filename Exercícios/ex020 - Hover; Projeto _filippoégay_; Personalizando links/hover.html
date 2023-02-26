@@ -12,10 +12,7 @@ body{
     background-image: linear-gradient(#74ec74ef 40%, #31d331ef);
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body:hover{
-    background-image: radial-gradient(#74ec74ef 40%, #31d331ef); ;
+    height: 100vh;
 }
 
 main{
@@ -29,7 +26,7 @@ main{
     }
 
 main:hover{
-    box-shadow: 2px 2px 4px #a86f36;
+    box-shadow: 2px 2px 4px #a86f364d;
 }
 
 h1{
@@ -58,19 +55,7 @@ text-align: center;
 width: 250px;
 border-radius: 9px;
 margin: auto;
-}
-
-main:hover{
-    animation: spin 5.3s;
-}
-
-@keyframes spin {
-    from {
-        transform: rotateY(0deg)
-    }
-    to{
-        transform: rotateY(360deg)
-    }
+transition: .5s;
 }
 
 div > p{ /*se refere ao _p_ que está DENTRO (>) da _div_*/
@@ -87,7 +72,7 @@ h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-div:hover > p#teAmo{ /*quando passar o mouse nessa _div_, o _p_ se tornará assim:*/
+div:hover > p#Ola{ /*quando passar o mouse nessa _div_, o _p_ se tornará assim:*/
     display: block; /*declaração para, quando passar o mouse por cima, aparecer o texto com todas essas características abaixo:*/
     color: #58560b;
     background-color: #f8f272;
@@ -107,10 +92,10 @@ div:hover > p#teAmo{ /*quando passar o mouse nessa _div_, o _p_ se tornará assi
 
 <body>
     <main>
-            <h1>Esse cartão é animado</h1>
-            <p id="temcoisa">E tem alguma coisa importante aqui:</p>
+            <h1>Este cartão é interativo</h1>
+            <p id="temcoisa">E tem alguma coisa aqui:</p>
         <div id="passeomouse">Passe o mouse aqui
-            <p id="teAmo">Filippo<br>é gay!!</p>
+            <p id="Ola">Olá!</p>
         </div>
     </main>
 </body>
