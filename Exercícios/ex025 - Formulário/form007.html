@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+    
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p>
+            <label for="iest">Estado</label>  <!--  ATRELADO ao "input"  -->
+            <select name="est" id="iest">  <!--  _select_ cria uma "Lista Suspensa"  -->
+                    <optgroup label="Sudeste">  <!--  Cria uma "categoria" dentro da Lista Suspensa  -->
+                        <option value="MG">Minas Gerais</option>  <!--  Opções da Lista Suspensa-->
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP" selected>São Paulo</option>  <!--  _selected_ define como o padrão, que aparece-->
+                    </optgroup>
+
+                    <optgroup label="Nordeste"> 
+                        <option value="AL">Alagoas</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>  <!--  ATRELADO ao input  -->
+            <input type="text" name="prof" id="iprof" list="lstprof">  <!--  input tipo text e Lista Suspensa (list="...")  -->
+            <datalist id="lstprof">  <!--  cria Lista Suspensa, com um ID ligado ao input type text -->
+                <option value="ADM">Administrador</option>  <!--  _value_ define "código" para a option   -->
+                <option>Contador</option>  <!--  opções da Lista Suspensa  -->
+                <option>Desenvolvedor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Deixe um comentário:</label><br>  <!--  ATRELADO ao textarea  -->
+            <textarea name="msg" id="imsg" cols="30" rows="6" placeholder="..."></textarea>  <!--  com ID ligado ao label, definido para que mostre 30 caracteres por linha e 6 linhas  -->
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+
+</html>
