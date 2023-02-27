@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    /*  LARGE SCREEN  */
+
+    header, main{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .large{
+        display: block;
+        text-align: center;
+        font-size: 3.4em;
+        color: #b0afaf96;
+        font-weight: 600;
+        animation: text-focus-in .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+
+    @keyframes text-focus-in {  
+    0% {
+    filter: blur(20px);
+    opacity: 0;
+    }
+    100% {
+    filter: blur(0px);
+    opacity: 1;
+    }
+}
+}
