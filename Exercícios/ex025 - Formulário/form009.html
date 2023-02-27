@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>    
+    <p>
+        <label for="inum"></label>
+        <input type="range" name="num" id="inum" min="0" max="100" value="10" 
+            oninput="ival.innerHTML = Number(inum.value)">
+        <!--  
+            oninput="ival.innerHTML = Number(inum.value)"
+                > oninput = quando entrar com dados no INPUT range id INUM...
+                    > "ival.innerHTML = o OUTPUT id IVAL exibirá...
+                        > inum.value" = o valor do INPUT RANGE id INUM
+        -->
+        <output id="ival">10</output>  <!--  OUTPUT referente ao valor do INPUT RANGE, valor inicial 10   -->
+    </p>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+</body>
+
+</html>
