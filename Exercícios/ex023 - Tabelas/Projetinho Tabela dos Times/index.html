@@ -13,9 +13,15 @@
     <h1>Projeto: Times da SÉRIE A</h1>
     <p>Criação de uma tabela com o nome, estado e região de cada time da<br> primeira divisão do Campeonato Brasileiro de Futebol do ano de 2023.</p>
     <table>
+        <colgroup>
+            <col class="escudo">
+            <col class="time">
+            <col class="estado">
+            <col class="região">
+        </colgroup>
         <thead>
             <tr>
-                <td>Escudo</td>
+                <td class="th-escudo">Escudo</td>
                 <td>Time</td>
                 <td>Estado</td>
                 <td>Região</td>
@@ -23,8 +29,19 @@
         </thead>
         <tbody>
             <tr>
-                <td><img src="https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg" alt="América"></td>
-                <td>América</td>
+                <td><img src="https://s.sde.globo.com/media/organizations/2019/02/28/America-MG-VERDE-fev2019-01.svg" alt="América">
+                </td>
+                <td>
+                    <details>
+                        <summary>América</summary>
+                        <h4>Em 2022</h4>
+                        <ul>
+                            <li>10ª colocação</li>
+                            <li>53 pontos</li>
+                            <li>Vaga pra Sul-Americana</li>
+                        </ul>
+                    </details>
+                </td>
                 <td>Minas Gerais</td>
                 <td>Sudeste</td>
             </tr>
