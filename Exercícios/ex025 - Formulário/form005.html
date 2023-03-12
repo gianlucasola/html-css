@@ -5,32 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #f3d2e0;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        main{
+            background-color: #090c11;
+            border-radius: 10px;
+            box-shadow: 3px 3px 8px 1px #00000033;
+            min-width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1{
+            color: #edf8e9;
+            text-align: center;
+            margin: 15px 0px;
+        }
+
+        fieldset{
+            border: 2px solid #eee;
+            border-radius: 5px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        legend{
+            background-color: #9af17d;
+            color: #000000;
+            border-radius: 5px;
+            padding: 5px 9px;
+            margin-bottom: 10px;
+            width:131px;
+            font-size: 1em;
+        }
+
+        label{
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        input[type=radio], input[type=checkbox]{
+            width: .9em;
+            accent-color: #9af17d;
+            cursor: pointer;
+            margin-bottom: 12px;
+        }
+
+        .buttons{
+            /* background-color: blueviolet; */
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height: 25px;
+            gap: 10px;
+            margin: 15px auto;
+        }
+
+        .buttons input{
+            background-color: #2f373b;
+            border: none;
+            border-radius: 4px;
+            width: 70px;
+            font-size: .8em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .buttons input:hover{
+            background-color: #cedfe7;
+            color: #454545;
+            font-weight: 500;
+        }
+
+    </style>
 </head>
 
 <body>
-    <h1>Exemplo de Formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="off">
-
-        <fieldset>
-            <legend>Gênero</legend>
-            <input type="radio" name="genero" id="fem" value="f"><label for="fem">Feminino</label><br>  <!--  se referir aos inputs RADIO com o mesmo nome para todos, podendo assim ALTERNAR e SELECIONAR APENAS UM  -->
-            <input type="radio" name="genero" id="masc" value="m" checked><label for="masc">Masculino</label>
-        </fieldset>
-
-        <fieldset>  <!--  Grupo de Campos  -->
-            <legend>Esportes Favoritos</legend>
-            <input type="checkbox" name="basq" id="ibasq"><label for="ibasq">Basquete</label><br>  <!--  input checkbox de ID IBASQ com um label atrelado a esse ID, para marcar a checkbox clicando também na palavra, não só na caixinha  -->
-            <input type="checkbox" name="fut" id="ifut" checked><label for="ifut">Futebol</label><br>  <!--  "argumento" CHECKED dentro do input para deixar marcado por padrão-->
-            <input type="checkbox" name="nat" id="inat"><label for="inat">Natação</label><br>
-            <input type="checkbox" name="ping" id="iping"><label for="iping">Tênis de Mesa</label><br>
-            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">Vôlei</label><br>
-        </fieldset>
-
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
-    </form>
+    <main>
+        <h1>Formulário</h1>
+        <form autocomplete="off">
+            <fieldset>
+                <legend>Gênero</legend>
+                <input type="radio" name="genero" id="fem" value="f"><label for="fem">Feminino</label><br>  <!--  se referir aos inputs RADIO com o mesmo nome para todos, podendo assim ALTERNAR e SELECIONAR APENAS UM  -->
+                <input type="radio" name="genero" id="masc" value="m" ><label for="masc">Masculino</label>
+            </fieldset>
+            <fieldset>  <!--  Grupo de Campos  -->
+                <legend>Esportes Favoritos</legend>
+                <input type="checkbox" name="basq" id="ibasq"><label for="ibasq">Basquete</label><br>  <!--  input checkbox de ID IBASQ com um label atrelado a esse ID, para marcar a checkbox clicando também na palavra, não só na caixinha  -->
+                <input type="checkbox" name="fut" id="ifut"><label for="ifut">Futebol</label><br>  <!--  "argumento" CHECKED dentro do input para deixar marcado por padrão-->
+                <input type="checkbox" name="nat" id="inat"><label for="inat">Natação</label><br>
+                <input type="checkbox" name="ping" id="iping"><label for="iping">Tênis de Mesa</label><br>
+                <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">Vôlei</label><br>
+            </fieldset>
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>
