@@ -1,12 +1,9 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');  /*  'Russo One', sans-serif  */
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');  /*  'Josefin Sans', sans-serif  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*  font-family: 'Poppins', sans-serif;  */
 
 *{
-font-family: 'Open Sans', sans-serif;
-font-weight: lighter;
+font-family: 'Poppins', sans-serif;
 }
 
 body, html{
@@ -14,25 +11,54 @@ body, html{
     padding: 0;
 }
 
-main{
-    /* background-color: #00ff00; */
-    max-width: 800px;
+body{
+    background-image: url("https://explosaotricolor.com.br/wp-content/uploads/2021/06/20210329144723_444.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+menu{
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    'img title'
+    'img p';
+}
+
+menu img{
+    grid-area: img;
+    height: 100%;
     margin: 0 auto;
-    
+    padding: 0px 15px;
+    margin-top: -2px;
 }
 
 h1{
+    grid-area: title;
     margin: 0;
+    padding-top: 5px;
     text-align: center;
-    font-family: 'Russo One', sans-serif;
+    font-weight: 700;
+    background-color: #009b54;
+    color: white;
 }
 
 p{
-    width: 615px;
+    grid-area: p;
     text-align: center;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    padding-top: 4px;
+    font-weight: 400;
+}
+
+main{
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 5px #2e2d2d1e;
 }
 
 table{
@@ -40,31 +66,77 @@ table{
     margin: 0 auto;
 }
 
-colgroup .escudo{
-    background-color: rgba(186, 248, 186, 0.596);
+thead td{
+    border-bottom: 1px solid #93a2bd;
+    height: 35px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #003999;
 }
 
-thead td{
-    font-family: 'Russo One', sans-serif;
-    border: 1px solid #000;
-    height: 35px;
+tbody td{
+    border-bottom: 1px solid #d8d7d7;
+    width: 300px;
+    height: 90px;
+    padding: 0;
+    font-weight: 400;
     text-align: center;
     font-size: 1.1em;
 }
 
-tbody td{
-    border: 1px solid #000;
-    width: 300px;
-    height: 65px;
-    padding: 0;
-    font-weight: 500;
-    text-align: center;
-    font-size: 1em;
+img{
+    height: 60px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.144));
 }
 
-tbody img{
-    width: 28%;
-    margin: 8px 0px;
-    filter: drop-shadow(2px 2px 5px #00000059);
+summary, h4, li{
+    font-weight: 400;
+    margin: 0;
+}
+
+details{
     cursor: pointer;
+}
+
+summary::marker{
+    color: white;
+}
+
+details summary::before{  /*  América  */
+    content: "\2261";
+    margin-right: 8px;
+    margin-left: -4px;
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+details summary{  /*  América  */
+    text-align: left;
+}
+
+details h4{  /*  Em 2022...  */
+    font-size: 0.9em;
+    text-align: left;
+    margin-left: 16px;
+}
+
+details ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+details li{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+details li::before{
+    padding-right: 6px;
+    margin-left: 6px;
+    content: "\003e";
+    color: rgb(20, 150, 20);
+    font-weight: 700;
 }
